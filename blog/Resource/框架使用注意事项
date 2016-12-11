@@ -1,0 +1,32 @@
+Hibernate
+1.注解方式管理bean:
+ 			1.Autowired用于接口
+ 			2.Service的实现类用@Service注解
+ 			3.DaoImpl用@Repository注解
+ 			4.继承了HibernateDaoSupport的DaoImpl要添加一下代码
+ 			@Resource  
+  			public void setSessionFacotry(SessionFactory sessionFacotry) {  
+       			 super.setSessionFactory(sessionFacotry);  
+   			}  
+2.HibernateTemplate的查询语句是hql语句,格式为: 
+    from Object where property=?要以对象作为查询
+    	返回值为List
+3.mysql 主键Field  doesn't have a default value 报错,注解的时候要制定策略,初始值,每次增长的个数如下所示:
+    @Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@TableGenerator(initialValue=1,allocationSize=1, name = "userid") (主键列名)
+4.HibernateDaoSupport 可以直接用this.getSession()得到事务   
+
+5.数据库一对多,多对一关系:
+		用户  ----------文章
+		一 <-----对---->多
+		用户这边   @OneToMany(cascade=CascadeType.ALL)  @JoinColumn(name="fatherID") //对应儿子类的哪个字段 
+		文章这边   @Column(name="fatherID")  
+   
+Struts2 
+解决中文乱码问题,在struts.xml文件中添加<constant name="struts.i18n.encoding" value="gb2312" />
+
+1.表单验证:
+		1.过滤器先将数据发送给validate,所以要将实体的属性先设置好,再用实体的getter方法作条件判断,之后在注册中就不用设置了
+		2.验证失败的返回值,一定要返回一个"input"
+   有了表单验证后,每个表单都会经过@Validations注解的方法,如果不让其经过表单验证,则添加@SkipValidations

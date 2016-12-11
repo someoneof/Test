@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC  
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.max_fetch_depth">3</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- JDBC URL -->
+		<property name="connection.url">jdbc:mysql://localhost:3306/blog?characterEncoding=utf-8</property>
+
+		<property name="connection.username">root</property>
+		<!-- 数据库密码 -->
+		<property name="connection.password">haifeng</property>
+		<property name="hibernate.jdbc.fetch_size">18</property>
+		<property name="hibernate.jdbc.batch_size">10</property>
+		<property name="hibernate.format_sql">false</property>
+		<property name="current_session_context_class">thread</property>
+		<mapping class="myblog.bean.User" />
+		<mapping class="myblog.bean.Article" />
+		<mapping class="myblog.bean.Comment" />
+		<mapping class="myblog.bean.BlogInfo" />
+	</session-factory>
+</hibernate-configuration>

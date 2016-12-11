@@ -1,0 +1,19 @@
+action:  
+	  	  registerAction
+	  	  loginAction
+	  	  addMessageAction
+	  	  文章模块：
+	  	  addActileAction
+	  	  deleteActileAction
+	  	  updateActileAction
+	  	  checkAllActileAction
+	  	  checkActileAction
+	  	 评论模块：
+	  	  addCommentAction
+	  	  deleteCommentAction
+	  	  checkAllCommentAction
+	  	 相册模块：
+	  	  addPhotoTypeAction
+	  	  deletePhotoTypeAction
+	  	  uploadPhotoAction
+	  	  deletePhotoAction

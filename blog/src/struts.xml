@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="gb2312" />
+	<package name="ssh" namespace="/" extends="struts-default">
+		<action name="user_*" class="myblog.action.UserAction" method="{1}">
+			<result name="reg_success">/login.jsp</result>
+			<result name="input">/register.jsp</result>
+			<result name="login_succ">/success.jsp</result>
+			<result name="login_fail">/error.jsp</result>
+		</action>
+		<action name="art_*" class="myblog.action.ArticleAction" method="{1}">
+			<result name="find_art_succ">/user/showUserAllArticle.jsp</result>
+			<result name="findAll_art">/showAllArticle.jsp</result>
+			<result name="show_success">/user/showArticle.jsp</result>
+			<result name="add_success" type="redirectAction">art_findByUsername.action</result>
+			<result name="input">/user/addArticle.jsp</result>
+		</action>
+		<action name="blog_*" class="myblog.action.BlogInfoAction" method="{1}">
+			<result name="set_success" type="redirectAction">art_findByUsername.action</result>
+			<result name="input">/user/editbloginfo.jsp</result>
+		</action>
+
+
+
+	</package>
+
+</struts>

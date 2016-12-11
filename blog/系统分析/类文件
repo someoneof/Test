@@ -1,0 +1,47 @@
+service:
+		  registerService
+		  loginService
+		  addMessageService
+		    文章模块：
+	  	  addActileService
+	  	  deleteActileService
+	  	  updateActileService
+	  	  checkAllActileService
+	  	  checkActileService
+	  	   评论模块：
+	  	  addCommentService
+	  	  deleteCommentService
+	  	  checkAllCommentService
+	   	  相册模块：
+	  	  addPhotoTypeService
+	  	  deletePhotoTypeService
+	  	  uploadPhotoService
+	  	  deletePhotoService
+Dao:
+		  registerDao
+		  logingDao
+		  addMessageDao
+		    文章模块：
+	  	  addActileDao
+	  	  deleteActileDao
+	  	  updateActileDao
+	  	  checkAllActileDao
+	  	  checkActileDao
+	  	   评论模块：
+	  	  addCommentDao
+	  	  deleteCommentDao
+	  	  checkAllCommentDao
+	  	  相册模块：
+	  	  addPhotoTypeDao
+	  	  deletePhotoTypeDao
+	  	  uploadPhotoDao
+	  	  deletePhotoDao
+分页信息：
+	      PageBean
+	      PageDao
+	      PageDaoImpl
+	      PageDaoServiceImpl
+	      PageDaoService
+
+
+		  	      

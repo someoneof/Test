@@ -1,0 +1,27 @@
+用户登录后:
+		Article:
+  		  addActile
+	  	  deleteActile
+	  	  updateActile
+	  	  findAllArticles
+	  	  findArticle
+
+success.jsp->findAllArticles.action-->showAllArticles.jsp
+
+添加文章:addArticles.jsp->editbloginfo.jsp->addArticle.action
+
+数据库bloginfo  username,blogTitle,idiograph
+login.jsp->login.action->editbloginfo.jsp->editbloginfo.action
+
+==================================主页===================================
+用户登陆之后-->showAllArticle.action(显示所有用户的文章)-->showAllArticle.jsp
+
+点击用户首页-->showAllArticle.action(显示所有用户的文章)-->showAllArticle.jsp
+
+点击个性化设置-->editbloginfo.jsp--->editbloginfo.action-->showUserAllArticle.action-->showUserAllArticle.jsp
+
+点击写日志-->addArticle.jsp-->addArticle.action-->showUserAllArticle.jsp
+
+点击相册-->showphoto.action-->showphoto.jsp===> 1.点击浏览
+
+点击留言板-->showMessageBoard.action-->showMessageBoard.jsp

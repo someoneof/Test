@@ -1,0 +1,22 @@
+用户信息：
+		  id
+		  userid
+		  password
+		  username
+		  question
+		  answer
+文章信息：
+		  actileId
+		  title
+		  content
+		  username
+		  data
+		  hasread
+博客信息：
+		  blogId(手动赋值)
+		  userid
+		  username
+		  blogTitle
+		  idiograph
+		  
+		  		  		  
